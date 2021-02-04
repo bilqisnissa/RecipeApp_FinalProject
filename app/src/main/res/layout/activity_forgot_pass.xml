@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_16dp"
+    android:orientation="vertical"
+    tools:context=".ForgotPassActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgotten_password"
+            android:layout_marginTop="55dp"
+            android:textSize="@dimen/_35sp"
+            android:textStyle="bold"
+            android:textColor="@color/Green"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_forgot_password"
+            android:textSize="@dimen/_22sp"
+            android:textColor="@color/dark_green"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="@dimen/_379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50dp"
+        android:text="@string/email"
+        android:textSize="@dimen/_18sp"
+        android:textColor="@color/grey"/>
+
+    <Button
+        android:layout_width="378dp"
+        android:layout_height="64dp"
+        android:background="@drawable/background_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_60dp"
+        android:text="@string/send_email"/>
+
+</LinearLayout>
