@@ -7,6 +7,21 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+    </FrameLayout>
+
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -21,18 +36,14 @@
         app:layout_constraintVertical_bias="0.001"
         app:navGraph="@navigation/main_navigation" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rv_main"
-        android:layout_marginTop="@dimen/_50dp"
-        tools:listitem="item_recipe"/>
-
     <Button
         android:id="@+id/btn_sign_out"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_out" />
+        android:layout_marginTop="52dp"
+        android:text="@string/sign_out"
+        app:layout_constraintTop_toBottomOf="@+id/rv_main"
+        tools:layout_editor_absoluteX="0dp" />
 
     <me.ibrahimsn.lib.SmoothBottomBar
         android:id="@+id/nav_bottom_view"
@@ -45,7 +56,7 @@
         app:iconTint="@android:color/darker_gray"
         app:backgroundColor="@color/white"
         app:indicatorColor="@color/Green"
-        app:textSize="@dimen/_14dp"
+        app:textSize="@dimen/_14sp"
         app:textColor="@color/white"
         app:iconSize="@dimen/_24dp"
         app:indicatorRadius="@dimen/_10dp"/>

@@ -16,6 +16,21 @@ import com.muflihunnisa.recipeapp.utils.Const.setTimeStamp
 class AddFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        arguments?.let {
+
+        }
+    }
+
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_add, container, false)
+    }
+
+    companion object {
+        //todo
     }
 
 }

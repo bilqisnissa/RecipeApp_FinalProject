@@ -28,4 +28,7 @@
     <string name="jenis">Jenis</string>
     <string name="save">Save</string>
     <string name="name">Name</string>
+    <string name="fragment_add">Fragment Add</string>
+    <string name="fragment_bookmark">Fragment Bookmark</string>
+    <string name="fragment_home">Fragment Home</string>
 </resources>
