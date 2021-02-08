@@ -8,9 +8,11 @@
     android:orientation="vertical"
     tools:context=".ForgotPassActivity">
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/ib_back_forgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:src="@drawable/ic_arrow_back"/>
 
     <LinearLayout
@@ -39,7 +41,7 @@
         android:layout_width="@dimen/_379dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_50dp"
-        android:text="@string/email"
+        android:hint="@string/email"
         android:textSize="@dimen/_18sp"
         android:textColor="@color/grey"/>
 

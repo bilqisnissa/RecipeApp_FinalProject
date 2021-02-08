@@ -9,12 +9,22 @@
         android:id="@+id/bookmarkFragment"
         android:name="com.muflihunnisa.recipeapp.BookmarkFragment"
         android:label="fragment_bookmark"
-        tools:layout="@layout/fragment_bookmark" />
+        tools:layout="@layout/fragment_bookmark">
+        <action
+            android:id="@+id/action_homeFragment_to_AddFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/addFragment"
         android:name="com.muflihunnisa.recipeapp.AddFragment"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" />
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_homeFragment_to_AddFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/homeFragment2"
         android:name="com.muflihunnisa.recipeapp.HomeFragment"

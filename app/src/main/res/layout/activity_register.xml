@@ -7,9 +7,11 @@
     android:orientation="vertical"
     tools:context=".RegisterActivity">
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/ib_back_regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:src="@drawable/ic_arrow_back"
         android:layout_marginTop="@dimen/_16dp"
         android:layout_marginStart="@dimen/_16dp"/>
@@ -42,7 +44,7 @@
         android:layout_width="@dimen/_379dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_60dp"
-        android:text="@string/username"
+        android:hint="@string/username"
         android:textSize="@dimen/_18sp"
         android:textColor="@color/grey"
         android:layout_marginStart="@dimen/_16dp"/>
@@ -51,7 +53,7 @@
         android:layout_width="@dimen/_379dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_50dp"
-        android:text="@string/email"
+        android:hint="@string/email"
         android:textSize="@dimen/_18sp"
         android:textColor="@color/grey"
         android:layout_marginStart="@dimen/_16dp"/>
@@ -60,7 +62,7 @@
         android:layout_width="@dimen/_379dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_50dp"
-        android:text="@string/password"
+        android:hint="@string/password"
         android:textSize="@dimen/_18sp"
         android:textColor="@color/grey"
         android:layout_marginStart="@dimen/_16dp"/>
@@ -71,7 +73,7 @@
         android:background="@drawable/background_button"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/_60dp"
-        android:text="@string/sign_up"/>
+        android:text="@string/text_register"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -85,9 +87,10 @@
             android:text="@string/already_a_member"/>
 
         <TextView
+            android:id="@+id/tv_login_regis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_sign_in"
+            android:text="@string/text_login"
             android:textStyle="bold"
             android:textColor="@color/black"/>
     </LinearLayout>

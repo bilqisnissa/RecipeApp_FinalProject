@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -17,9 +18,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.muflihunnisa.recipeapp.MainActivity
 import com.muflihunnisa.recipeapp.LoginActivity.Companion.getLaunchService
+import kotlinx.android.synthetic.main.activity_forgot_pass.*
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mGoogleSignInClient : GoogleSignInClient
     private lateinit var  gso : GoogleSignInOptions
@@ -46,6 +48,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
 
+        tv_forgot_pass.setOnClickListener(this)
+        tv_register_login.setOnClickListener(this)
         configurationGoogleSignIn()
         setUpRequestUI()
         firebaseAuth = FirebaseAuth.getInstance()
@@ -116,5 +120,12 @@ class LoginActivity : AppCompatActivity() {
     private fun signIn() {
         val intent : Intent = mGoogleSignInClient.signInIntent
         startActivityForResult(intent, RC_SIGN_IN)
+    }
+
+    override fun onClick(p0: View) {
+        when(p0.id){
+            R.id.tv_register_login -> startActivity(RegisterActivity.getLaunchService(this))
+            R.id.tv_forgot_pass -> startActivity(ForgotPassActivity.getLaunchService(this))
+        }
     }
 }
